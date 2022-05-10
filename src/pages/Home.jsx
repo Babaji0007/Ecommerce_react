@@ -1,13 +1,13 @@
 import React from 'react'
 import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
-import HomepageimageSlide from "../components/HomepageimageSlider"
+import Slider from '../components/Slider'
 
 const Home = () => {
   return (
     <div>
         <Navbar/>
-        <HomepageimageSlide/>
+        <Slider/>
         <Footer/>
     </div>
   )
