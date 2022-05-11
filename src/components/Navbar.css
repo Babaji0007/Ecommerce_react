@@ -10,7 +10,7 @@
   }
   .navbar>div{
     display: flex;
-    
+    color: #fff;
     gap: 30px;
    margin-left: 20px;
    margin-right: 20px;
@@ -18,6 +18,7 @@
   .navbar>div>p{
     cursor: pointer;
   }
+  span{color: aqua; font-size: larger; font-family: Georgia, 'Times New Roman', Times, serif;}
   .navbar_search{
     border: none;
     height: 22px;
@@ -42,5 +43,5 @@
   justify-content: center;
   margin: auto;
   cursor: pointer;
-   
+
   }

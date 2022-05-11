@@ -1,51 +1,140 @@
-import React from 'react'
 
-const Footer = () => {
-  return (
-    <div className='footer'>
-      <div class="end">
-      <div class="e1">
-          <h3>PC Accessories</h3>
-          <p>About Us</p>
-          <p>Careers</p>
-          <p>Investors</p>
-          <p>PC Accessories Stock</p>
-          <p>App</p>
-          <p>Insight</p>
-          <p>Press</p>
-          <p>Inspiration</p>
-         
-      </div>
-      <div  class="e2">
-          <h3>CONTACT</h3>
-          <p>Press</p>
-          <p>Help Centre and Contact</p>
-          <p>Become a Parnter</p>
-          <p>Sign-Up as a Host</p>
-      </div>
-      <div  class="e3">
-          <h3>PRIVACY & TERMS</h3>
-          <p>Terms of Serivce</p>
-          <p>Privacy Policy</p>
-          <p>Legal</p>
-      </div>
-      <div  class="e3">
-          <h3>SOCIAL-MEDIA</h3>
-          <a className="ancher" href="https://www.linkedin.com/in/ankit-kumar-037983199/">Linkedin</a>
-          <br />
-          <br />
 
-          <a className="ancher" href="">Instagram</a>
-          <br />
-          <br />
-          <a className="ancher" href="">Facebook</a>
-      </div>
-  </div>
-       
-        
+  import { Facebook, Instagram, MailOutline, Phone, Pinterest, Room, Twitter } from "@mui/icons-material";
+import styled from "styled-components";
+ 
+  
+  const Container = styled.div`
+     background-color: antiquewhite;
+     display: flex;
+  
 
-    </div>
-  )
-}
+  `;
+  
+  const Left = styled.div`
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+  `;
+  
+  const Logo = styled.h1``;
+  
+  const Desc = styled.p`
+    margin: 20px 0px;
+    
+  `;
+  
+  const SocialContainer = styled.div`
+    display: flex;
+  `;
+  
+  const SocialIcon = styled.div`
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: white;
+    background-color: #${(props) => props.color};
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+  `;
+  
+  const Center = styled.div`
+    flex: 1;
+    padding: 20px;
 
-export default Footer
+  `;
+  
+  const Title = styled.h3`
+    margin-bottom: 30px;
+  `;
+  
+  const List = styled.ul`
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+  `;
+  
+  const ListItem = styled.li`
+    width: 50%;
+    margin-bottom: 10px;
+  `;
+  
+  const Right = styled.div`
+    flex: 1;
+    padding: 20px;
+
+  `;
+  
+  const ContactItem = styled.div`
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+  `;
+  
+  const Payment = styled.img`
+      width: 50%;
+  `;
+  
+  const Footer = () => {
+    return (
+      <Container>
+        <Left>
+          <Logo>Fshop</Logo>
+          <Desc>
+            There are many variations of passages of Lorem Ipsum available, but
+            the majority have suffered alteration in some form, by injected
+            humour, or randomised words which don’t look even slightly believable.
+          </Desc>
+          <SocialContainer>
+            <SocialIcon color="3B5999">
+              <Facebook />
+            </SocialIcon>
+            <SocialIcon color="E4405F">
+              <Instagram />
+            </SocialIcon>
+            <SocialIcon color="55ACEE">
+              <Twitter />
+            </SocialIcon>
+            <SocialIcon color="E60023">
+              <Pinterest />
+            </SocialIcon>
+          </SocialContainer>
+        </Left>
+        <Center>
+          <Title>Useful Links</Title>
+          <List>
+            <ListItem>Home</ListItem>
+            <ListItem>Cart</ListItem>
+            <ListItem>Man Fashion</ListItem>
+            <ListItem>Woman Fashion</ListItem>
+            <ListItem>Accessories</ListItem>
+            <ListItem>My Account</ListItem>
+            <ListItem>Order Tracking</ListItem>
+            <ListItem>Wishlist</ListItem>
+            <ListItem>Wishlist</ListItem>
+            <ListItem>Terms</ListItem>
+          </List>
+        </Center>
+        <Right>
+          <Title>Contact</Title>
+          <ContactItem>
+            <Room style={{marginRight:"10px"}}/> 622 Dixie Path , delhi-6 121006
+          </ContactItem>
+          <ContactItem>
+            <Phone style={{marginRight:"10px"}}/> +1 234 56 78
+          </ContactItem>
+          <ContactItem>
+            <MailOutline style={{marginRight:"10px"}} /> contact@fshop.co.in
+          </ContactItem>
+          <Payment src="https://i.ibb.co/Qfvn4z6/payment.png" />
+        </Right>
+      </Container>
+    );
+  };
+  
+  export default Footer;

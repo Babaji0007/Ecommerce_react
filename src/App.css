@@ -38,3 +38,185 @@ background-color: rgb(225, 223, 223);
   height: 500px;
   border: 2px dotted black;
 }
+/* product page css */
+
+.one{
+  margin-top: 200px;
+}
+.showdiv{
+  /* display: flex; */
+  margin-left: 2%;
+  margin-right: 2%;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
+  margin-top: 10%;
+  height: 800px;
+  transition: 0.5s;
+  border: 1px solid red;
+}
+
+.img1{
+  width: 80%;
+  height: 100%;
+}
+
+.productdiv{
+  margin-top: 10px;
+  display: grid;
+  margin-left: 2%;
+  grid-template-columns: repeat(3,1fr);
+ 
+}
+/* .showdiv:hover{ */
+  /* transform:scale(1.1) ;
+  z-index:2 ; */
+/* } */
+@media screen and (max-width: 480px) {
+  .productdiv{
+      display: grid;
+  grid-template-columns: repeat(1,1fr);
+  }
+  /* #main {margin-left: 216px;} */
+}
+@media screen and (min-width:440px ) and
+ ( max-width: 1100px) {
+  .productdiv{
+      display: grid;
+  grid-template-columns: repeat(2,1fr);
+  }
+  /* #main {margin-left: 216px;} */
+}
+
+.showdiv1{
+    width: 100%;
+    height: 50%;
+}
+.price{
+    margin-right: 80%;
+}
+.offerbutton{
+    padding: 10px;
+    border-radius: 50% ;
+    font-size: 20px;
+    color: white;
+    background-color: rgb(255,165,0);
+}
+.nameprice{
+    background-color: black;
+    width: 100%;
+    height: 35%;
+}
+.name{
+    color: white;
+    font-size: 15px;
+}
+.price{
+    color: white;
+    font-size: 20px
+}
+.pricedivbutton{
+    display: flex;
+    /* border: 1px solid green; */
+  
+}
+.pricediv{
+    width: 40%;
+    /* border: 1px solid red; */
+}
+.addtocartbutton{
+    width: 60%;
+    /* align-content: center; */
+}
+/* .cartbutton{
+    margin-top: 10%;
+    margin-left: 50%;
+} */
+
+
+/* CSS */
+.button-59 {
+  align-items: center;
+  background-color: #fff;
+  border: 2px solid #000;
+  box-sizing: border-box;
+  color: #000;
+  cursor: pointer;
+  display: inline-flex;
+  fill: #000;
+  font-family: Inter,sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  height: 48px;
+  justify-content: center;
+  letter-spacing: -.8px;
+  line-height: 24px;
+  min-width: 140px;
+  outline: 0;
+  padding: 0 17px;
+  text-align: center;
+  text-decoration: none;
+  transition: all .3s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-59:focus {
+  color: #171e29;
+}
+
+.button-59:hover {
+  border-color: #06f;
+  color: #06f;
+  fill: #06f;
+}
+
+.button-59:active {
+  border-color: #06f;
+  color: #06f;
+  fill: #06f;
+}
+
+@media (min-width: 768px) {
+  .button-59 {
+    min-width: 170px;
+  }
+}
+
+
+
+/* CSS */
+.button-62 {
+    margin-top: 5%;
+  background: linear-gradient(to bottom right, #EF4765, #FF9A5A);
+  border: 0;
+  border-radius: 12px;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system,system-ui,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 2.5;
+  outline: transparent;
+  padding: 0 1rem;
+  text-align: center;
+  text-decoration: none;
+  transition: box-shadow .2s ease-in-out;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+}
+
+.button-62:not([disabled]):focus {
+  box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(255, 154, 90, 0.5);
+}
+
+.button-62:not([disabled]):hover {
+  box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(255, 154, 90, 0.5);
+}
+.input1{
+    font-size: 20px;
+    padding: 10px 10px 10px 10px;
+}
