@@ -12,10 +12,10 @@ const Navbar = () => {
   return (
     <div className='navbar'>
     <div>
-       <Link to="/" >
+       <Link to="/" style={{  color: "#fff", textDecoration: "none"}}>
        <p><span>Fshop</span> </p>
        </Link>
-       <Link to="/" >
+       <Link to="/" style={{  color: "#fff", textDecoration: "none"}}>
         <p>Home</p>
         </Link>
         
@@ -23,20 +23,20 @@ const Navbar = () => {
         <input className='navbar_search'  type="text" placeholder='search' /><SearchIcon/>
         
         </div> */}
-        <Link to="/ProductShow" ><p>Products</p></Link>
+        <Link to="/ProductShow" style={{  color: "#fff", textDecoration: "none"}}><p>Products</p></Link>
         
         {/* <p>search</p> */}
     </div>
     <div>
-    <Link to="Login" ><p>LogIn</p></Link>
-    <Link to="Signup" ><p>SignUp</p></Link>
+    <Link to="/Login" style={{  color: "#fff", textDecoration: "none"}} ><p>LogIn</p></Link>
+    <Link to="/Signup" style={{  color: "#fff", textDecoration: "none"}} ><p>SignUp</p></Link>
        
        
-        <Link to ="/Cart">
+        <Link to ="/Cart"   >
         
              <div className='navbar_cart_icon_div' >
         <Badge badgeContent={5} color="primary">
-      <ShoppingCartOutlinedIcon />
+      <ShoppingCartOutlinedIcon style={{  color: "#fff", textDecoration: "none"}} />
     </Badge>
         </div>
         </Link>

@@ -47,17 +47,23 @@ background-color: rgb(225, 223, 223);
   /* display: flex; */
   margin-left: 2%;
   margin-right: 2%;
+  color: #000;
+  padding: 20px;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
-  margin-top: 10%;
-  height: 800px;
+  margin-top: 2%;
+  height: 500px;
   transition: 0.5s;
-  border: 1px solid red;
+  /* border: 1px solid rgb(142, 137, 142); */
+  overflow: hidden;
 }
 
 .img1{
-  width: 80%;
-  height: 100%;
+  width: 100%;
+  height: 200%;
+  /* text-align: center;
+  justify-content: center;
+  margin: auto; */
 }
 
 .productdiv{
@@ -67,10 +73,7 @@ background-color: rgb(225, 223, 223);
   grid-template-columns: repeat(3,1fr);
  
 }
-/* .showdiv:hover{ */
-  /* transform:scale(1.1) ;
-  z-index:2 ; */
-/* } */
+
 @media screen and (max-width: 480px) {
   .productdiv{
       display: grid;
@@ -90,28 +93,43 @@ background-color: rgb(225, 223, 223);
 .showdiv1{
     width: 100%;
     height: 50%;
+    color: #000;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    /* border: 1px solid red; */
 }
 .price{
     margin-right: 80%;
 }
 .offerbutton{
     padding: 10px;
-    border-radius: 50% ;
+    border-radius: 5% ;
     font-size: 20px;
     color: white;
-    background-color: rgb(255,165,0);
+    background-color: black;
 }
 .nameprice{
-    background-color: black;
+    /* background-color: black; */
     width: 100%;
-    height: 35%;
+    color: black;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    /* height: 35%; */
+    font-size: large;
+    font-weight: 400;
+    margin-left: 20px;
+    margin-top: 100px;
+    /* margin-right: 20px; */
+    /* padding: 20px; */
 }
 .name{
-    color: white;
+  font-size: large;
+  font-weight: bolder;
+    color: black;
     font-size: 15px;
 }
 .price{
-    color: white;
+    color: black;;
     font-size: 20px
 }
 .pricedivbutton{
@@ -120,7 +138,7 @@ background-color: rgb(225, 223, 223);
   
 }
 .pricediv{
-    width: 40%;
+    width: 80%;
     /* border: 1px solid red; */
 }
 .addtocartbutton{
@@ -188,9 +206,9 @@ background-color: rgb(225, 223, 223);
 /* CSS */
 .button-62 {
     margin-top: 5%;
-  background: linear-gradient(to bottom right, #EF4765, #FF9A5A);
+  background: linear-gradient(to bottom right, #af47ef, #5ae4ff);
   border: 0;
-  border-radius: 12px;
+  border-radius: 5px;
   color: #FFFFFF;
   cursor: pointer;
   display: inline-block;
@@ -207,6 +225,7 @@ background-color: rgb(225, 223, 223);
   -webkit-user-select: none;
   touch-action: manipulation;
   white-space: nowrap;
+  margin-left: 10px;
 }
 
 .button-62:not([disabled]):focus {
@@ -217,6 +236,90 @@ background-color: rgb(225, 223, 223);
   box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(255, 154, 90, 0.5);
 }
 .input1{
-    font-size: 20px;
-    padding: 10px 10px 10px 10px;
+  
+    color: black;
+    height: 22px;
+     /* color: #fff; */
+    outline: none;
+    border: none;
+
+}
+.product_search_icon_div{
+  /* border: 1px solid red; */
+  color: black;
+  height:28px;
+display: flex;
+background-color: #fff;
+border: 1px solid black;
+width: 200px;
+margin-left: 20px;
+/* align-items: center;
+justify-content: center;
+margin: auto; */
+ 
+}
+.productdetail1{
+  display: flex;
+  margin-left: 5%;
+  margin-right: 5%;
+ 
+}
+.productdetail4{
+  width: 40%;
+  height: 700px;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  /* border: 1px solid red; */
+}
+.productdetail2{
+  width: 100%;
+  height: 550px;
+  /* justify-content: center;
+  align-items: center;
+  margin: auto; */
+  padding: 20px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.imagedetail{
+  width: 100%;
+  height: 550px
+}
+.productdetail3{
+  display: flex;
+   justify-content: space-between; 
+}
+.cart{
+  padding: 15px 20px 15px 20px;
+  font-size: 17px;
+  font-weight: bold;
+  color: white;
+  margin-top: 10%;
+  background-color: #68d9f9;
+  border: none;
+  margin-right: 10%;
+}
+.buynow{
+  padding: 15px 20px 15px 20px;
+  font-size: 17px;
+  font-weight: bold;
+  color: white;
+  background-color: rgb(75, 240, 57);
+  border: none;
+  margin-top: 10%;
+ 
+}
+.productdetail5{
+  width: 50%;
+  margin-left: 5%;
+  /* border: 2px solid red; */
+  padding: 50px;
+}
+.productdetailname{
+  font-size: 30px;
+  
+}
+.productdetail5 span{
+  color: #000;
+  text-decoration: underline;
 }

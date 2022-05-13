@@ -6,12 +6,14 @@ import React, {useState, useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import {addTodo,delTodo} from "../redux/product/action"
 import Navbar from '../components/Navbar'
-
+import { useNavigate } from 'react-router-dom'
+import Footer from '../components/Footer'
+import SearchIcon from '@mui/icons-material/Search';
 const Todos = () => {
   const [search,setSeacrh] =useState("")
-
+const navigate=useNavigate()
     const dispatch=useDispatch()
-    const todos=useSelector((store)=>(store.todo.todo))
+    const todos=useSelector((store)=>(store.todo))
     useEffect(()=>{
     getData()
     },[])
@@ -87,15 +89,21 @@ const handleSort =(sort,value)=>{
     <Navbar/>
  <br />
  <br />
- <br />
- <br />
- <br />
+ <div className='product_search_icon_div' >
+        <input className='input1'  type="text" placeholder='search' 
+        onChange={(event)=>{
+          setSeacrh(event.target.value)
+          }}
+        
+        /><SearchIcon/>
+        
+        </div>
 
- <input className="input1" type="text" placeholder="You can search product"
+ {/* <input className="input1" type="text" placeholder="You can search product"
        onChange={(event)=>{
        setSeacrh(event.target.value)
-       }}/>
-      <br />
+       }}/> */}
+      {/* <br /> */}
        
         <button className="button-62" onClick={()=>{handleSort('asc','price')}} >Low to High Price</button>
         <button className="button-62" onClick={()=>{handleSort('dsc','price')}} >High to Low Price</button>
@@ -117,10 +125,13 @@ const handleSort =(sort,value)=>{
                  return e
                 }
               }).map((e)=>{
-                  return <div key={e.id} className="showdiv" >
-                    <div className="offer">
+                  return <div key={e.id} className="showdiv" onClick={()=>{
+                    navigate(`/product/${e.id}`)
+                  }} >
+
+                    {/* <div className="offer">
                       <button className="offerbutton">{e.discount}%Off</button>
-                    </div>
+                    </div> */}
                     <div className="showdiv1">
                    
                     <img className="img1" src={e.image} alt="" />
@@ -129,7 +140,10 @@ const handleSort =(sort,value)=>{
                     <p className="name">{e.name}</p>
                     <div className="pricedivbutton">
                       <div className="pricediv"><p className="price">₹{e.price}</p></div>
-                      <div className="addtocartbutton"><button className="button-62">Add To cart</button></div>
+                      <div className="addtocartbutton"><button className="button-62">See Details</button></div>
+                    </div>
+                    <div className="offer">
+                      <button className="offerbutton">{e.discount}%Off</button>
                     </div>
                     </div>
                       
@@ -138,6 +152,7 @@ const handleSort =(sort,value)=>{
               })
           }
     </div>
+    <Footer/>
     </>
   )
 }
