@@ -1,6 +1,7 @@
 // import "./checkout.css"
+import { useNavigate } from 'react-router-dom';
 export const CheckOut = () =>{
-
+  const navigate = useNavigate()
     return(<>
      <div class="mainscreen">
       <div class="card">
@@ -36,7 +37,10 @@ export const CheckOut = () =>{
             <input type="password" class="inputbox" name="cvv" id="cvv" required />
         </div>
             <p></p>
-            <button type="submit" class="button">CheckOut</button>
+            <button type="submit" class="button"onClick={()=>{
+              navigate("/Success")
+              alert("Payment successful ")
+               }} >CheckOut</button>
           </form>
         </div>
       </div>

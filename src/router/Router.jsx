@@ -8,6 +8,7 @@ import Cart from '../pages/Cart'
 import Todos from '../pages/ProductShow'
 import { ProductDetail } from '../pages/ProductDetail'
 import { CheckOut } from '../pages/Checkout'
+import { Success } from '../pages/Success'
 
 const Router = () => {
   return (
@@ -20,7 +21,7 @@ const Router = () => {
     <Route path='/ProductShow' element={<Todos/>} />
     <Route path='/Cart' element={<Cart/>} />
     <Route path='/Checkout'element={<CheckOut/>}></Route>
-
+    <Route path="/Success" element={<Success/>}></Route>
 
 
     </Routes>
