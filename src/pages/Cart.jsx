@@ -4,9 +4,11 @@ import Navbar from '../components/Navbar'
 import { useEffect, useState } from "react";
 // import { Link, useParams } from "react-router-dom";
 import axios from "axios";
+import { useNavigate } from 'react-router-dom';
 
 
 const Cart = () => {
+  const navigate = useNavigate()
   const [data,setData]=useState([])
 
   useEffect(()=>{
@@ -16,6 +18,7 @@ const Cart = () => {
   const getData=()=>{
     axios.get(`http://localhost:2100/cart`).then((res)=>{
       setData(res.data)
+      
     })
   }
   
@@ -24,17 +27,27 @@ const Cart = () => {
       getData()
     })
   }
+  console.log(`Data- ${data.length}`)
 
   return (
     <div>
       <Navbar/>
-      Cart 
+       
       {data.map((e)=>{
    return <div className="cartpagemaindiv">
      <img src={e.image} alt="" />
+
+
+
+
+
      <button onClick={()=>{
       deleteData(e.id)
      }}>Delete</button>
+
+     <button onClick={()=>{
+     navigate('/Checkout')
+     }}>checkout</button>
    </div>
 
  })}

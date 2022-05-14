@@ -7,9 +7,11 @@ import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import { useSelector,useDispatch } from 'react-redux';
 import { addData } from '../redux/product/action';
+import { useNavigate } from 'react-router-dom';
 
 
 export const  ProductDetail  = () =>{
+  const navigate = useNavigate()
   const disPatch=useDispatch();
 
   const rstore=useSelector((store)=>(store.data));
@@ -55,7 +57,9 @@ export const  ProductDetail  = () =>{
                     <button onClick={()=>{
                       return postData()
                     }} className='cart'><ShoppingCartOutlinedIcon /> ADD TO CART</button>
-                    <button className='buynow'>⚡ BUY NOW</button>
+                    <button className='buynow' onClick={()=>{
+     navigate('/Checkout')
+     }} >⚡ BUY NOW</button>
                 </div>
             </div>
 

@@ -4,11 +4,27 @@ import Badge from '@mui/material/Badge';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import './Navbar.css';
 import { Link } from 'react-router-dom';
+import { useEffect, useState } from "react";
+// import { Link, useParams } from "react-router-dom";
+import axios from "axios";
 
 
 
 
 const Navbar = () => {
+
+  const [data,setData]=useState([])
+
+  useEffect(()=>{
+    getData()
+  },[])
+  
+  const getData=()=>{
+    axios.get(`http://localhost:2100/cart`).then((res)=>{
+      setData(res.data)
+      
+    })
+  }
   return (
     <div className='navbar'>
     <div>
@@ -35,7 +51,7 @@ const Navbar = () => {
         <Link to ="/Cart"   >
         
              <div className='navbar_cart_icon_div' >
-        <Badge badgeContent={5} color="primary">
+        <Badge badgeContent={data.length} color="primary">
       <ShoppingCartOutlinedIcon style={{  color: "#fff", textDecoration: "none"}} />
     </Badge>
         </div>
